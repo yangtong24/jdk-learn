@@ -89,7 +89,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @param   name   the name of the new thread group.
      * @exception  SecurityException  if the current thread cannot create a
      *               thread in the specified thread group.
-     * @see     ThreadGroup#checkAccess()
+     * @see     java.lang.ThreadGroup#checkAccess()
      * @since   JDK1.0
      */
     public ThreadGroup(String name) {
@@ -109,8 +109,8 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      *               <code>null</code>.
      * @exception  SecurityException  if the current thread cannot create a
      *               thread in the specified thread group.
-     * @see     SecurityException
-     * @see     ThreadGroup#checkAccess()
+     * @see     java.lang.SecurityException
+     * @see     java.lang.ThreadGroup#checkAccess()
      * @since   JDK1.0
      */
     public ThreadGroup(ThreadGroup parent, String name) {
@@ -157,9 +157,9 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      *          is the only thread group whose parent is <code>null</code>.
      * @exception  SecurityException  if the current thread cannot modify
      *               this thread group.
-     * @see        ThreadGroup#checkAccess()
-     * @see        SecurityException
-     * @see        RuntimePermission
+     * @see        java.lang.ThreadGroup#checkAccess()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.RuntimePermission
      * @since   JDK1.0
      */
     public final ThreadGroup getParent() {
@@ -219,8 +219,8 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      *                      thread group as normal.
      * @exception  SecurityException  if the current thread cannot modify
      *               this thread group.
-     * @see        SecurityException
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      */
     public final void setDaemon(boolean daemon) {
@@ -252,8 +252,8 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @exception  SecurityException  if the current thread cannot modify
      *               this thread group.
      * @see        #getMaxPriority
-     * @see        SecurityException
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      */
     public final void setMaxPriority(int pri) {
@@ -306,7 +306,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      *
      * @exception  SecurityException  if the current thread is not allowed to
      *               access this thread group.
-     * @see        SecurityManager#checkAccess(ThreadGroup)
+     * @see        java.lang.SecurityManager#checkAccess(java.lang.ThreadGroup)
      * @since      JDK1.0
      */
     public final void checkAccess() {
@@ -600,9 +600,9 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @exception  SecurityException  if the current thread is not allowed
      *               to access this thread group or any of the threads in
      *               the thread group.
-     * @see        SecurityException
-     * @see        Thread#stop()
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.Thread#stop()
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      * @deprecated    This method is inherently unsafe.  See
      *     {@link Thread#stop} for details.
@@ -625,9 +625,9 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @exception  SecurityException  if the current thread is not allowed
      *               to access this thread group or any of the threads in
      *               the thread group.
-     * @see        Thread#interrupt()
-     * @see        SecurityException
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.Thread#interrupt()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      1.2
      */
     public final void interrupt() {
@@ -662,9 +662,9 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @exception  SecurityException  if the current thread is not allowed
      *               to access this thread group or any of the threads in
      *               the thread group.
-     * @see        Thread#suspend()
-     * @see        SecurityException
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.Thread#suspend()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      * @deprecated    This method is inherently deadlock-prone.  See
      *     {@link Thread#suspend} for details.
@@ -723,9 +723,9 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * @exception  SecurityException  if the current thread is not allowed to
      *               access this thread group or any of the threads in the
      *               thread group.
-     * @see        SecurityException
-     * @see        Thread#resume()
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.SecurityException
+     * @see        java.lang.Thread#resume()
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      * @deprecated    This method is used solely in conjunction with
      *      <tt>Thread.suspend</tt> and <tt>ThreadGroup.suspend</tt>,
@@ -766,7 +766,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      *               empty or if the thread group has already been destroyed.
      * @exception  SecurityException  if the current thread cannot modify this
      *               thread group.
-     * @see        ThreadGroup#checkAccess()
+     * @see        java.lang.ThreadGroup#checkAccess()
      * @since      JDK1.0
      */
     public final void destroy() {

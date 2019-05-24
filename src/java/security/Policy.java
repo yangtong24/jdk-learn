@@ -77,10 +77,10 @@ import sun.security.util.SecurityConstants;
  *
  * @author Roland Schemers
  * @author Gary Ellison
- * @see Provider
- * @see ProtectionDomain
- * @see Permission
- * @see Security security properties
+ * @see java.security.Provider
+ * @see java.security.ProtectionDomain
+ * @see java.security.Permission
+ * @see java.security.Security security properties
  */
 
 public abstract class Policy {
@@ -144,7 +144,7 @@ public abstract class Policy {
      *        getting the Policy object.
      *
      * @see SecurityManager#checkPermission(Permission)
-     * @see #setPolicy(Policy)
+     * @see #setPolicy(java.security.Policy)
      */
     public static Policy getPolicy()
     {
@@ -378,7 +378,7 @@ public abstract class Policy {
      * @see Provider
      * @since 1.6
      */
-    public static Policy getInstance(String type, Parameters params)
+    public static Policy getInstance(String type, Policy.Parameters params)
                 throws NoSuchAlgorithmException {
 
         checkPermission(type);
@@ -439,7 +439,7 @@ public abstract class Policy {
      * @since 1.6
      */
     public static Policy getInstance(String type,
-                                Parameters params,
+                                Policy.Parameters params,
                                 String provider)
                 throws NoSuchProviderException, NoSuchAlgorithmException {
 
@@ -499,7 +499,7 @@ public abstract class Policy {
      * @since 1.6
      */
     public static Policy getInstance(String type,
-                                Parameters params,
+                                Policy.Parameters params,
                                 Provider provider)
                 throws NoSuchAlgorithmException {
 
@@ -573,7 +573,7 @@ public abstract class Policy {
      *
      * @since 1.6
      */
-    public Parameters getParameters() {
+    public Policy.Parameters getParameters() {
         return null;
     }
 
@@ -700,7 +700,7 @@ public abstract class Policy {
      * @return true if "permission" is a proper subset of a permission
      * granted to this ProtectionDomain.
      *
-     * @see ProtectionDomain
+     * @see java.security.ProtectionDomain
      * @since 1.4
      */
     public boolean implies(ProtectionDomain domain, Permission permission) {
@@ -751,10 +751,10 @@ public abstract class Policy {
         private PolicySpi spi;
         private Provider p;
         private String type;
-        private Parameters params;
+        private Policy.Parameters params;
 
         private PolicyDelegate(PolicySpi spi, Provider p,
-                        String type, Parameters params) {
+                        String type, Policy.Parameters params) {
             this.spi = spi;
             this.p = p;
             this.type = type;
@@ -763,7 +763,7 @@ public abstract class Policy {
 
         @Override public String getType() { return type; }
 
-        @Override public Parameters getParameters() { return params; }
+        @Override public Policy.Parameters getParameters() { return params; }
 
         @Override public Provider getProvider() { return p; }
 

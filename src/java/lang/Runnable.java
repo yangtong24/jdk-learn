@@ -48,7 +48,7 @@ package java.lang;
  * behavior of the class.
  *
  * @author  Arthur van Hoff
- * @see     Thread
+ * @see     java.lang.Thread
  * @see     java.util.concurrent.Callable
  * @since   JDK1.0
  */
@@ -63,7 +63,7 @@ public interface Runnable {
      * The general contract of the method <code>run</code> is that it may
      * take any action whatsoever.
      *
-     * @see     Thread#run()
+     * @see     java.lang.Thread#run()
      */
     public abstract void run();
 }

@@ -122,7 +122,7 @@ public final class Channels {
      */
     public static InputStream newInputStream(ReadableByteChannel ch) {
         checkNotNull(ch, "ch");
-        return new ChannelInputStream(ch);
+        return new sun.nio.ch.ChannelInputStream(ch);
     }
 
     /**

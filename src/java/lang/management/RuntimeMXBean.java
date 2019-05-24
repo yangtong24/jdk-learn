@@ -79,12 +79,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine implementation name.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getVmName();
 
@@ -95,12 +95,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine implementation vendor.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getVmVendor();
 
@@ -111,12 +111,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine implementation version.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getVmVersion();
 
@@ -127,12 +127,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine specification name.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getSpecName();
 
@@ -143,12 +143,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine specification vendor.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getSpecVendor();
 
@@ -159,12 +159,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java virtual machine specification version.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getSpecVersion();
 
@@ -190,12 +190,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java class path.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getClassPath();
 
@@ -210,12 +210,12 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the Java library path.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to this system property.
-     * @see SecurityManager#checkPropertyAccess(String)
-     * @see System#getProperty
+     * @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
+     * @see java.lang.System#getProperty
      */
     public String getLibraryPath();
 
@@ -245,10 +245,10 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return the boot class path.
      *
-     * @throws UnsupportedOperationException
+     * @throws java.lang.UnsupportedOperationException
      *     if the Java virtual machine does not support this operation.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and the caller does not have
      *     ManagementPermission("monitor").
      */
@@ -277,7 +277,7 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      * @return a list of <tt>String</tt> objects; each element
      * is an argument passed to the Java virtual machine.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and the caller does not have
      *     ManagementPermission("monitor").
      */
@@ -330,7 +330,7 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      *
      * @return a map of names and values of all system properties.
      *
-     * @throws  SecurityException
+     * @throws  java.lang.SecurityException
      *     if a security manager exists and its
      *     <code>checkPropertiesAccess</code> method doesn't allow access
      *     to the system properties.

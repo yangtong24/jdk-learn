@@ -67,7 +67,7 @@ class DefaultDatagramSocketImplFactory {
                 throw new SocketException("can't instantiate DatagramSocketImpl");
             }
         } else {
-            return new PlainDatagramSocketImpl();
+            return new java.net.PlainDatagramSocketImpl();
         }
     }
 }

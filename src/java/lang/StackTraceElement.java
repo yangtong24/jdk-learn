@@ -188,7 +188,7 @@ public final class StackTraceElement implements java.io.Serializable {
      *     equals(a.getMethodName(), b.getMethodName())
      * }</pre>
      * where {@code equals} has the semantics of {@link
-     * Objects#equals(Object, Object) Objects.equals}.
+     * java.util.Objects#equals(Object, Object) Objects.equals}.
      *
      * @param  obj the object to be compared with this stack trace element.
      * @return true if the specified object is another

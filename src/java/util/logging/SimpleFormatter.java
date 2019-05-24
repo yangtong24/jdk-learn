@@ -88,7 +88,7 @@ public class SimpleFormatter extends Formatter {
      *     log level}.</li>
      * <li>{@code message} - the formatted log message
      *     returned from the {@link Formatter#formatMessage(LogRecord)}
-     *     method.  It uses {@link MessageFormat java.text}
+     *     method.  It uses {@link java.text.MessageFormat java.text}
      *     formatting and does not use the {@code java.util.Formatter
      *     format} argument.</li>
      * <li>{@code thrown} - a string representing

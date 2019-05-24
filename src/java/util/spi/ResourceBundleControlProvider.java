@@ -29,10 +29,10 @@ import java.util.ResourceBundle;
 
 /**
  * An interface for service providers that provide implementations of {@link
- * ResourceBundle.Control}. The <a
+ * java.util.ResourceBundle.Control}. The <a
  * href="../ResourceBundle.html#default_behavior">default resource bundle loading
  * behavior</a> of the {@code ResourceBundle.getBundle} factory methods that take
- * no {@link ResourceBundle.Control} instance can be modified with {@code
+ * no {@link java.util.ResourceBundle.Control} instance can be modified with {@code
  * ResourceBundleControlProvider} implementations.
  *
  * <p>Provider implementations must be packaged using the <a

@@ -37,10 +37,10 @@ package java.rmi;
  * @author  Ann Wollrath
  * @author  Roger Riggs
  * @since   JDK1.1
- * @see     Naming
+ * @see     java.rmi.Naming
  * @see     java.rmi.activation.ActivationSystem
  */
-public class AccessException extends RemoteException {
+public class AccessException extends java.rmi.RemoteException {
 
     /* indicate compatibility with JDK 1.1.x version of class */
      private static final long serialVersionUID = 6314925228044966088L;

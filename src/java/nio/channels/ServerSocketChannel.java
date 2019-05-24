@@ -41,7 +41,7 @@ import java.nio.channels.spi.SelectorProvider;
  * open but not yet bound.  An attempt to invoke the {@link #accept() accept}
  * method of an unbound server-socket channel will cause a {@link NotYetBoundException}
  * to be thrown. A server-socket channel can be bound by invoking one of the
- * {@link #bind(SocketAddress,int) bind} methods defined by this class.
+ * {@link #bind(java.net.SocketAddress,int) bind} methods defined by this class.
  *
  * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. Server-socket channels support the following options:
@@ -90,13 +90,13 @@ public abstract class ServerSocketChannel
      * Opens a server-socket channel.
      *
      * <p> The new channel is created by invoking the {@link
-     * SelectorProvider#openServerSocketChannel
+     * java.nio.channels.spi.SelectorProvider#openServerSocketChannel
      * openServerSocketChannel} method of the system-wide default {@link
-     * SelectorProvider} object.
+     * java.nio.channels.spi.SelectorProvider} object.
      *
      * <p> The new channel's socket is initially unbound; it must be bound to a
      * specific address via one of its socket's {@link
-     * ServerSocket#bind(SocketAddress) bind} methods before
+     * java.net.ServerSocket#bind(SocketAddress) bind} methods before
      * connections can be accepted.  </p>
      *
      * @return  A new socket channel
@@ -213,7 +213,7 @@ public abstract class ServerSocketChannel
      * Retrieves a server socket associated with this channel.
      *
      * <p> The returned object will not declare any public methods that are not
-     * declared in the {@link ServerSocket} class.  </p>
+     * declared in the {@link java.net.ServerSocket} class.  </p>
      *
      * @return  A server socket associated with this channel
      */
@@ -231,12 +231,12 @@ public abstract class ServerSocketChannel
      * blocking mode regardless of the blocking mode of this channel.
      *
      * <p> This method performs exactly the same security checks as the {@link
-     * ServerSocket#accept accept} method of the {@link
-     * ServerSocket} class.  That is, if a security manager has been
+     * java.net.ServerSocket#accept accept} method of the {@link
+     * java.net.ServerSocket} class.  That is, if a security manager has been
      * installed then for each new connection this method verifies that the
      * address and port number of the connection's remote endpoint are
      * permitted by the security manager's {@link
-     * SecurityManager#checkAccept checkAccept} method.  </p>
+     * java.lang.SecurityManager#checkAccept checkAccept} method.  </p>
      *
      * @return  The socket channel for the new connection,
      *          or <tt>null</tt> if this channel is in non-blocking mode

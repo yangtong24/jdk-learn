@@ -32,7 +32,7 @@ import java.util.spi.LocaleServiceProvider;
 /**
  * An abstract class for service providers that
  * provide concrete implementations of the
- * {@link Collator Collator} class.
+ * {@link java.text.Collator Collator} class.
  *
  * @since        1.6
  */
@@ -53,9 +53,9 @@ public abstract class CollatorProvider extends LocaleServiceProvider {
      * <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link LocaleServiceProvider#getAvailableLocales()
+     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see Collator#getInstance(Locale)
+     * @see java.text.Collator#getInstance(java.util.Locale)
      */
     public abstract Collator getInstance(Locale locale);
 }

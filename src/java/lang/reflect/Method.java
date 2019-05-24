@@ -49,11 +49,11 @@ import java.nio.ByteBuffer;
  * narrowing conversion would occur.
  *
  * @see Member
- * @see Class
- * @see Class#getMethods()
- * @see Class#getMethod(String, Class[])
- * @see Class#getDeclaredMethods()
- * @see Class#getDeclaredMethod(String, Class[])
+ * @see java.lang.Class
+ * @see java.lang.Class#getMethods()
+ * @see java.lang.Class#getMethod(String, Class[])
+ * @see java.lang.Class#getDeclaredMethods()
+ * @see java.lang.Class#getDeclaredMethod(String, Class[])
  *
  * @author Kenneth Russell
  * @author Nakul Saraiya

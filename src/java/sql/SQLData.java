@@ -110,7 +110,7 @@ public interface SQLData {
   * @see SQLInput
   * @since 1.2
   */
-  void readSQL(SQLInput stream, String typeName) throws SQLException;
+  void readSQL (SQLInput stream, String typeName) throws SQLException;
 
   /**
   * Writes this object to the given SQL data stream, converting it back to
@@ -133,5 +133,5 @@ public interface SQLData {
   * @see SQLOutput
   * @since 1.2
   */
-  void writeSQL(SQLOutput stream) throws SQLException;
+  void writeSQL (SQLOutput stream) throws SQLException;
 }

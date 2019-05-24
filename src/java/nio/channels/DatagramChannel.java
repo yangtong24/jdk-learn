@@ -45,8 +45,8 @@ import java.nio.channels.spi.SelectorProvider;
  * connected, by invoking its {@link #connect connect} method, in order to
  * avoid the overhead of the security checks are otherwise performed as part of
  * every send and receive operation.  A datagram channel must be connected in
- * order to use the {@link #read(ByteBuffer) read} and {@link
- * #write(ByteBuffer) write} methods, since those methods do not
+ * order to use the {@link #read(java.nio.ByteBuffer) read} and {@link
+ * #write(java.nio.ByteBuffer) write} methods, since those methods do not
  * accept or return socket addresses.
  *
  * <p> Once connected, a datagram channel remains connected until it is
@@ -129,9 +129,9 @@ public abstract class DatagramChannel
      * Opens a datagram channel.
      *
      * <p> The new channel is created by invoking the {@link
-     * SelectorProvider#openDatagramChannel()
+     * java.nio.channels.spi.SelectorProvider#openDatagramChannel()
      * openDatagramChannel} method of the system-wide default {@link
-     * SelectorProvider} object.  The channel will not be
+     * java.nio.channels.spi.SelectorProvider} object.  The channel will not be
      * connected.
      *
      * <p> The {@link ProtocolFamily ProtocolFamily} of the channel's socket
@@ -158,9 +158,9 @@ public abstract class DatagramChannel
      * that this channel will join.
      *
      * <p> The new channel is created by invoking the {@link
-     * SelectorProvider#openDatagramChannel(ProtocolFamily)
+     * java.nio.channels.spi.SelectorProvider#openDatagramChannel(ProtocolFamily)
      * openDatagramChannel} method of the system-wide default {@link
-     * SelectorProvider} object.  The channel will not be
+     * java.nio.channels.spi.SelectorProvider} object.  The channel will not be
      * connected.
      *
      * @param   family
@@ -230,7 +230,7 @@ public abstract class DatagramChannel
      * Retrieves a datagram socket associated with this channel.
      *
      * <p> The returned object will not declare any public methods that are not
-     * declared in the {@link DatagramSocket} class.  </p>
+     * declared in the {@link java.net.DatagramSocket} class.  </p>
      *
      * @return  A datagram socket associated with this channel
      */
@@ -254,11 +254,11 @@ public abstract class DatagramChannel
      * explicitly disconnected or until it is closed.
      *
      * <p> This method performs exactly the same security checks as the {@link
-     * DatagramSocket#connect connect} method of the {@link
-     * DatagramSocket} class.  That is, if a security manager has been
+     * java.net.DatagramSocket#connect connect} method of the {@link
+     * java.net.DatagramSocket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
-     * SecurityManager#checkAccept checkAccept} and {@link
-     * SecurityManager#checkConnect checkConnect} methods permit
+     * java.lang.SecurityManager#checkAccept checkAccept} and {@link
+     * java.lang.SecurityManager#checkConnect checkConnect} methods permit
      * datagrams to be received from and sent to, respectively, the given
      * remote address.
      *
@@ -345,17 +345,17 @@ public abstract class DatagramChannel
      *
      * <p> The datagram is transferred into the given byte buffer starting at
      * its current position, as if by a regular {@link
-     * ReadableByteChannel#read(ByteBuffer) read} operation.  If there
+     * ReadableByteChannel#read(java.nio.ByteBuffer) read} operation.  If there
      * are fewer bytes remaining in the buffer than are required to hold the
      * datagram then the remainder of the datagram is silently discarded.
      *
      * <p> This method performs exactly the same security checks as the {@link
-     * DatagramSocket#receive receive} method of the {@link
-     * DatagramSocket} class.  That is, if the socket is not connected
+     * java.net.DatagramSocket#receive receive} method of the {@link
+     * java.net.DatagramSocket} class.  That is, if the socket is not connected
      * to a specific remote address and a security manager has been installed
      * then for each datagram received this method verifies that the source's
      * address and port number are permitted by the security manager's {@link
-     * SecurityManager#checkAccept checkAccept} method.  The overhead
+     * java.lang.SecurityManager#checkAccept checkAccept} method.  The overhead
      * of this security check can be avoided by first connecting the socket via
      * the {@link #connect connect} method.
      *
@@ -407,15 +407,15 @@ public abstract class DatagramChannel
      * address.
      *
      * <p> The datagram is transferred from the byte buffer as if by a regular
-     * {@link WritableByteChannel#write(ByteBuffer) write} operation.
+     * {@link WritableByteChannel#write(java.nio.ByteBuffer) write} operation.
      *
      * <p> This method performs exactly the same security checks as the {@link
-     * DatagramSocket#send send} method of the {@link
-     * DatagramSocket} class.  That is, if the socket is not connected
+     * java.net.DatagramSocket#send send} method of the {@link
+     * java.net.DatagramSocket} class.  That is, if the socket is not connected
      * to a specific remote address and a security manager has been installed
      * then for each datagram sent this method verifies that the target address
      * and port number are permitted by the security manager's {@link
-     * SecurityManager#checkConnect checkConnect} method.  The
+     * java.lang.SecurityManager#checkConnect checkConnect} method.  The
      * overhead of this security check can be avoided by first connecting the
      * socket via the {@link #connect connect} method.
      *

@@ -572,7 +572,7 @@ public final class ZonedDateTime
      * {@code 2007-12-03T10:15:30+01:00[Europe/Paris]}.
      * <p>
      * The string must represent a valid date-time and is parsed using
-     * {@link DateTimeFormatter#ISO_ZONED_DATE_TIME}.
+     * {@link java.time.format.DateTimeFormatter#ISO_ZONED_DATE_TIME}.
      *
      * @param text  the text to parse such as "2007-12-03T10:15:30+01:00[Europe/Paris]", not null
      * @return the parsed zoned date-time, not null
@@ -1187,7 +1187,7 @@ public final class ZonedDateTime
      * {@link java.time.temporal.TemporalAdjusters TemporalAdjusters}.
      * These include finding the "last day of the month" and "next Wednesday".
      * Key date-time classes also implement the {@code TemporalAdjuster} interface,
-     * such as {@link Month} and {@link MonthDay MonthDay}.
+     * such as {@link Month} and {@link java.time.MonthDay MonthDay}.
      * The adjuster is responsible for handling special cases, such as the varying
      * lengths of month and leap years.
      * <p>

@@ -32,7 +32,7 @@ package java.lang;
  * thrown when the index is equal to the size of the string.
  *
  * @author  unascribed
- * @see     String#charAt(int)
+ * @see     java.lang.String#charAt(int)
  * @since   JDK1.0
  */
 public

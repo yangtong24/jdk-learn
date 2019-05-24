@@ -30,8 +30,8 @@ package java.util;
  * does not exist.
  *
  * @author  unascribed
- * @see     Enumeration#nextElement()
- * @see     Iterator#next()
+ * @see     java.util.Enumeration#nextElement()
+ * @see     java.util.Iterator#next()
  * @since   JDK1.0
  */
 public

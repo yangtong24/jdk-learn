@@ -1059,7 +1059,7 @@ public final class Period
      * Defend against malicious streams.
      *
      * @param s the stream to read
-     * @throws InvalidObjectException always
+     * @throws java.io.InvalidObjectException always
      */
     private void readObject(ObjectInputStream s) throws InvalidObjectException {
         throw new InvalidObjectException("Deserialization via serialization delegate");

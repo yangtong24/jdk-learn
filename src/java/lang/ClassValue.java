@@ -402,7 +402,7 @@ public abstract class ClassValue<T> {
      *  Gives a fully serialized "true state" for each pair (ClassValue cv, Class type).
      *  Also manages an unserialized fast-path cache.
      */
-    static class ClassValueMap extends WeakHashMap<Identity, Entry<?>> {
+    static class ClassValueMap extends WeakHashMap<ClassValue.Identity, Entry<?>> {
         private final Class<?> type;
         private Entry<?>[] cacheArray;
         private int cacheLoad, cacheLoadLimit;

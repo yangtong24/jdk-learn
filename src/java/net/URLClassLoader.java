@@ -664,7 +664,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
         try {
             urlConnection = url.openConnection();
             p = urlConnection.getPermission();
-        } catch (IOException ioe) {
+        } catch (java.io.IOException ioe) {
             p = null;
             urlConnection = null;
         }
@@ -772,7 +772,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
     }
 
     static {
-        SharedSecrets.setJavaNetAccess (
+        sun.misc.SharedSecrets.setJavaNetAccess (
             new sun.misc.JavaNetAccess() {
                 public URLClassPath getURLClassPath (URLClassLoader u) {
                     return u.ucp;

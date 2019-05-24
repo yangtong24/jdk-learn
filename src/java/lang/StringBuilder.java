@@ -62,15 +62,15 @@ package java.lang;
  *
  * <p>Instances of {@code StringBuilder} are not safe for
  * use by multiple threads. If such synchronization is required then it is
- * recommended that {@link StringBuffer} be used.
+ * recommended that {@link java.lang.StringBuffer} be used.
  *
  * <p>Unless otherwise noted, passing a {@code null} argument to a constructor
  * or method in this class will cause a {@link NullPointerException} to be
  * thrown.
  *
  * @author      Michael McCloskey
- * @see         StringBuffer
- * @see         String
+ * @see         java.lang.StringBuffer
+ * @see         java.lang.String
  * @since       1.5
  */
 public final class StringBuilder

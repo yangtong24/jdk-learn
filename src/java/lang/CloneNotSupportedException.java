@@ -36,8 +36,8 @@ package java.lang;
  * should not be cloned.
  *
  * @author  unascribed
- * @see     Cloneable
- * @see     Object#clone()
+ * @see     java.lang.Cloneable
+ * @see     java.lang.Object#clone()
  * @since   JDK1.0
  */
 

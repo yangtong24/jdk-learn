@@ -81,7 +81,7 @@ import java.util.Objects;
  * For example, the Japanese, Minguo, Thai Buddhist and others.
  * <p>
  * {@code ChronoLocalDate} is built on the generic concepts of year, month and day.
- * The calendar system, represented by a {@link Chronology}, expresses the relationship between
+ * The calendar system, represented by a {@link java.time.chrono.Chronology}, expresses the relationship between
  * the fields and this class allows the resulting date to be manipulated.
  * <p>
  * Note that not all calendar systems are suitable for use with this class.
@@ -130,7 +130,7 @@ import java.util.Objects;
  * {@code Chronology} must be registered as a Service implementing the {@code Chronology} interface
  * in the {@code META-INF/Services} file as per the specification of {@link java.util.ServiceLoader}.
  * The subclass must function according to the {@code Chronology} class description and must provide its
- * {@link Chronology#getId() chronlogy ID} and {@link Chronology#getCalendarType() calendar type}. </p>
+ * {@link java.time.chrono.Chronology#getId() chronlogy ID} and {@link Chronology#getCalendarType() calendar type}. </p>
  *
  * @implSpec
  * This abstract class must be implemented with care to ensure other classes operate correctly.

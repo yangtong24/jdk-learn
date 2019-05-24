@@ -36,9 +36,9 @@ import java.util.Set;
  *
  * <p> A selector may be created by invoking the {@link #open open} method of
  * this class, which will use the system's default {@link
- * SelectorProvider selector provider} to
+ * java.nio.channels.spi.SelectorProvider selector provider} to
  * create a new selector.  A selector may also be created by invoking the
- * {@link SelectorProvider#openSelector openSelector}
+ * {@link java.nio.channels.spi.SelectorProvider#openSelector openSelector}
  * method of a custom selector provider.  A selector remains open until it is
  * closed via its {@link #close close} method.
  *
@@ -82,7 +82,7 @@ import java.util.Set;
  *
  * <a name="sks"></a><p> Keys are added to the selected-key set by selection
  * operations.  A key may be removed directly from the selected-key set by
- * invoking the set's {@link Set#remove(Object) remove}
+ * invoking the set's {@link java.util.Set#remove(java.lang.Object) remove}
  * method or by invoking the {@link java.util.Iterator#remove() remove} method
  * of an {@link java.util.Iterator iterator} obtained from the
  * set.  Keys are never removed from the selected-key set in any other way;
@@ -174,7 +174,7 @@ import java.util.Set;
  *   </p></li>
  *
  *   <li><p> By invoking the blocked thread's {@link
- *   Thread#interrupt() interrupt} method, in which case its
+ *   java.lang.Thread#interrupt() interrupt} method, in which case its
  *   interrupt status will be set and the selector's {@link #wakeup wakeup}
  *   method will be invoked. </p></li>
  *
@@ -189,7 +189,7 @@ import java.util.Set;
  * by multiple concurrent threads.  If such a thread might modify one of these
  * sets directly then access should be controlled by synchronizing on the set
  * itself.  The iterators returned by these sets' {@link
- * Set#iterator() iterator} methods are <i>fail-fast:</i> If the set
+ * java.util.Set#iterator() iterator} methods are <i>fail-fast:</i> If the set
  * is modified after the iterator is created, in any way except by invoking the
  * iterator's own {@link java.util.Iterator#remove() remove} method, then a
  * {@link java.util.ConcurrentModificationException} will be thrown. </p>
@@ -214,9 +214,9 @@ public abstract class Selector implements Closeable {
      * Opens a selector.
      *
      * <p> The new selector is created by invoking the {@link
-     * SelectorProvider#openSelector openSelector} method
+     * java.nio.channels.spi.SelectorProvider#openSelector openSelector} method
      * of the system-wide default {@link
-     * SelectorProvider} object.  </p>
+     * java.nio.channels.spi.SelectorProvider} object.  </p>
      *
      * @return  A new selector
      *

@@ -50,10 +50,10 @@ public class Modifier {
      *  packages
      */
     static {
-        ReflectionFactory factory =
+        sun.reflect.ReflectionFactory factory =
             AccessController.doPrivileged(
                 new ReflectionFactory.GetReflectionFactoryAction());
-        factory.setLangReflectAccess(new ReflectAccess());
+        factory.setLangReflectAccess(new java.lang.reflect.ReflectAccess());
     }
 
     /**

@@ -1169,7 +1169,7 @@ public final class Collectors {
      * @apiNote
      * It is common for either the key or the value to be the input elements.
      * In this case, the utility method
-     * {@link Function#identity()} may be helpful.
+     * {@link java.util.function.Function#identity()} may be helpful.
      * For example, the following produces a {@code Map} mapping
      * students to their grade point average:
      * <pre>{@code
@@ -1336,7 +1336,7 @@ public final class Collectors {
      * @apiNote
      * It is common for either the key or the value to be the input elements.
      * In this case, the utility method
-     * {@link Function#identity()} may be helpful.
+     * {@link java.util.function.Function#identity()} may be helpful.
      * For example, the following produces a {@code Map} mapping
      * students to their grade point average:
      * <pre>{@code
@@ -1549,12 +1549,12 @@ public final class Collectors {
         }
 
         @Override
-        public Set<Entry<Boolean, T>> entrySet() {
-            return new AbstractSet<Entry<Boolean, T>>() {
+        public Set<Map.Entry<Boolean, T>> entrySet() {
+            return new AbstractSet<Map.Entry<Boolean, T>>() {
                 @Override
-                public Iterator<Entry<Boolean, T>> iterator() {
-                    Entry<Boolean, T> falseEntry = new SimpleImmutableEntry<>(false, forFalse);
-                    Entry<Boolean, T> trueEntry = new SimpleImmutableEntry<>(true, forTrue);
+                public Iterator<Map.Entry<Boolean, T>> iterator() {
+                    Map.Entry<Boolean, T> falseEntry = new SimpleImmutableEntry<>(false, forFalse);
+                    Map.Entry<Boolean, T> trueEntry = new SimpleImmutableEntry<>(true, forTrue);
                     return Arrays.asList(falseEntry, trueEntry).iterator();
                 }
 

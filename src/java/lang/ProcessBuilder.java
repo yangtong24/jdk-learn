@@ -168,7 +168,7 @@ import java.util.Map;
  * }</pre>
  *
  * <p>To start a process with an explicit set of environment
- * variables, first call {@link Map#clear() Map.clear()}
+ * variables, first call {@link java.util.Map#clear() Map.clear()}
  * before adding environment variables.
  *
  * @author Martin Buchholz
@@ -278,7 +278,7 @@ public final class ProcessBuilder
      * their environment.
      *
      * <p>The returned object may be modified using ordinary {@link
-     * Map Map} operations.  These modifications will be
+     * java.util.Map Map} operations.  These modifications will be
      * visible to subprocesses started via the {@link #start()}
      * method.  Two {@code ProcessBuilder} instances always
      * contain independent process environments, so changes to the
@@ -333,7 +333,7 @@ public final class ProcessBuilder
      *         {@link SecurityManager#checkPermission checkPermission}
      *         method doesn't allow access to the process environment
      *
-     * @see    Runtime#exec(String[],String[], File)
+     * @see    Runtime#exec(String[],String[],java.io.File)
      * @see    System#getenv()
      */
     public Map<String,String> environment() {
@@ -999,7 +999,7 @@ public final class ProcessBuilder
      *
      * @throws IOException if an I/O error occurs
      *
-     * @see Runtime#exec(String[], String[], File)
+     * @see Runtime#exec(String[], String[], java.io.File)
      */
     public Process start() throws IOException {
         // Must convert to array first -- a malicious user-supplied

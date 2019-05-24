@@ -119,9 +119,9 @@ public abstract class AsynchronousServerSocketChannel
      * Opens an asynchronous server-socket channel.
      *
      * <p> The new channel is created by invoking the {@link
-     * AsynchronousChannelProvider#openAsynchronousServerSocketChannel
+     * java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousServerSocketChannel
      * openAsynchronousServerSocketChannel} method on the {@link
-     * AsynchronousChannelProvider} object that created
+     * java.nio.channels.spi.AsynchronousChannelProvider} object that created
      * the given group. If the group parameter is <tt>null</tt> then the
      * resulting channel is created by the system-wide default provider, and
      * bound to the <em>default group</em>.

@@ -229,7 +229,7 @@ public class UnicastRemoteObject extends RemoteServer {
      * Re-export the remote object when it is deserialized.
      */
     private void readObject(java.io.ObjectInputStream in)
-        throws java.io.IOException, ClassNotFoundException
+        throws java.io.IOException, java.lang.ClassNotFoundException
     {
         in.defaultReadObject();
         reexport();
@@ -365,7 +365,7 @@ public class UnicastRemoteObject extends RemoteServer {
      * @since 1.2
      */
     public static boolean unexportObject(Remote obj, boolean force)
-        throws NoSuchObjectException
+        throws java.rmi.NoSuchObjectException
     {
         return sun.rmi.transport.ObjectTable.unexportObject(obj, force);
     }

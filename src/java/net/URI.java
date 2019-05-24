@@ -272,9 +272,9 @@ import java.lang.NullPointerException;  // for javadoc
  *   <tr><th valign=top><i>other</i></th>
  *       <td>The Unicode characters that are not in the US-ASCII character set,
  *           are not control characters (according to the {@link
- *           Character#isISOControl(char) Character.isISOControl}
+ *           java.lang.Character#isISOControl(char) Character.isISOControl}
  *           method), and are not space characters (according to the {@link
- *           Character#isSpaceChar(char) Character.isSpaceChar}
+ *           java.lang.Character#isSpaceChar(char) Character.isSpaceChar}
  *           method)&nbsp;&nbsp;<i>(<b>Deviation from RFC 2396</b>, which is
  *           limited to US-ASCII)</i></td></tr>
  * </table></blockquote>
@@ -336,13 +336,13 @@ import java.lang.NullPointerException;  // for javadoc
  *
  * <ul>
  *
- *   <li><p> The {@linkplain #URI(String) single-argument
+ *   <li><p> The {@linkplain #URI(java.lang.String) single-argument
  *   constructor} requires any illegal characters in its argument to be
  *   quoted and preserves any escaped octets and <i>other</i> characters that
  *   are present.  </p></li>
  *
  *   <li><p> The {@linkplain
- *   #URI(String, String, String,int, String, String, String)
+ *   #URI(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)
  *   multi-argument constructors} quote illegal characters as
  *   required by the components in which they appear.  The percent character
  *   ({@code '%'}) is always quoted by these constructors.  Any <i>other</i>
@@ -1020,7 +1020,7 @@ public final class URI
      * against this URI.
      *
      * <p> This convenience method works as if invoking it were equivalent to
-     * evaluating the expression {@link #resolve(URI)
+     * evaluating the expression {@link #resolve(java.net.URI)
      * resolve}{@code (URI.}{@link #create(String) create}{@code (str))}. </p>
      *
      * @param  str   The string to be parsed into a URI
@@ -1403,7 +1403,7 @@ public final class URI
      * case.
      *
      * <p> This method satisfies the general contract of the {@link
-     * Object#equals(Object) Object.equals} method. </p>
+     * java.lang.Object#equals(Object) Object.equals} method. </p>
      *
      * @param   ob   The object to which this object is to be compared
      *
@@ -1448,7 +1448,7 @@ public final class URI
     /**
      * Returns a hash-code value for this URI.  The hash code is based upon all
      * of the URI's components, and satisfies the general contract of the
-     * {@link Object#hashCode() Object.hashCode} method.
+     * {@link java.lang.Object#hashCode() Object.hashCode} method.
      *
      * @return  A hash-code value for this URI
      */
@@ -1481,7 +1481,7 @@ public final class URI
      * component is undefined but the other is defined then the first is
      * considered to be less than the second.  Unless otherwise noted, string
      * components are ordered according to their natural, case-sensitive
-     * ordering as defined by the {@link String#compareTo(Object)
+     * ordering as defined by the {@link java.lang.String#compareTo(Object)
      * String.compareTo} method.  String components that are subject to
      * encoding are compared by comparing their raw forms rather than their
      * encoded forms.
@@ -1530,7 +1530,7 @@ public final class URI
      * </ul>
      *
      * <p> This method satisfies the general contract of the {@link
-     * Comparable#compareTo(Object) Comparable.compareTo}
+     * java.lang.Comparable#compareTo(Object) Comparable.compareTo}
      * method. </p>
      *
      * @param   that
@@ -1630,7 +1630,7 @@ public final class URI
      *
      * <p> The only serializable field of a URI instance is its {@code string}
      * field.  That field is given a value, if it does not have one already,
-     * and then the {@link ObjectOutputStream#defaultWriteObject()}
+     * and then the {@link java.io.ObjectOutputStream#defaultWriteObject()}
      * method of the given object-output stream is invoked. </p>
      *
      * @param  os  The object-output stream to which this object
@@ -1646,7 +1646,7 @@ public final class URI
     /**
      * Reconstitutes a URI from the given serial stream.
      *
-     * <p> The {@link ObjectInputStream#defaultReadObject()} method is
+     * <p> The {@link java.io.ObjectInputStream#defaultReadObject()} method is
      * invoked to read the value of the {@code string} field.  The result is
      * then parsed in the usual way.
      *

@@ -78,9 +78,9 @@ import java.util.Iterator;
  * <a name="interop"></a><h2>Interoperability</h2>
  * <p> Paths associated with the default {@link
  * java.nio.file.spi.FileSystemProvider provider} are generally interoperable
- * with the {@link File java.io.File} class. Paths created by other
+ * with the {@link java.io.File java.io.File} class. Paths created by other
  * providers are unlikely to be interoperable with the abstract path names
- * represented by {@code java.io.File}. The {@link File#toPath toPath}
+ * represented by {@code java.io.File}. The {@link java.io.File#toPath toPath}
  * method may be used to obtain a {@code Path} from the abstract path name
  * represented by a {@code java.io.File} object. The resulting {@code Path} can
  * be used to operate on the same file as the {@code java.io.File} object. In
@@ -469,7 +469,7 @@ public interface Path
      * a {@link URI#getPath() path} component that is absolute. The query and
      * fragment components are undefined. Whether the authority component is
      * defined or not is implementation dependent. There is no guarantee that
-     * the {@code URI} may be used to construct a {@link File java.io.File}.
+     * the {@code URI} may be used to construct a {@link java.io.File java.io.File}.
      * In particular, if this path represents a Universal Naming Convention (UNC)
      * path, then the UNC server name may be encoded in the authority component
      * of the resulting URI. In the case of the default provider, and the file
@@ -477,7 +477,7 @@ public interface Path
      * resulting {@code URI} will end with a slash.
      *
      * <p> The default provider provides a similar <em>round-trip</em> guarantee
-     * to the {@link File} class. For a given {@code Path} <i>p</i> it
+     * to the {@link java.io.File} class. For a given {@code Path} <i>p</i> it
      * is guaranteed that
      * <blockquote><tt>
      * {@link Paths#get(URI) Paths.get}(</tt><i>p</i><tt>.toUri()).equals(</tt><i>p</i>
@@ -764,7 +764,7 @@ public interface Path
      * paths locate the same file.
      *
      * <p> This method satisfies the general contract of the {@link
-     * Object#equals(Object) Object.equals} method. </p>
+     * java.lang.Object#equals(Object) Object.equals} method. </p>
      *
      * @param   other
      *          the object to which this object is to be compared

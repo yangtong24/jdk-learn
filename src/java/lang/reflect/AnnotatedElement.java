@@ -220,15 +220,15 @@ import sun.reflect.annotation.AnnotationType;
  * {@code @Repeatable} annotation whose value element indicates a type
  * <i>TC</i>, but <i>TC</i> does not declare a {@code value()} method
  * with a return type of <i>T</i>{@code []}, then an exception of type
- * {@link AnnotationFormatError} is thrown.
+ * {@link java.lang.annotation.AnnotationFormatError} is thrown.
  *
  * <p>Finally, attempting to read a member whose definition has evolved
  * incompatibly will result in a {@link
  * java.lang.annotation.AnnotationTypeMismatchException} or an
  * {@link java.lang.annotation.IncompleteAnnotationException}.
  *
- * @see EnumConstantNotPresentException
- * @see TypeNotPresentException
+ * @see java.lang.EnumConstantNotPresentException
+ * @see java.lang.TypeNotPresentException
  * @see AnnotationFormatError
  * @see java.lang.annotation.AnnotationTypeMismatchException
  * @see java.lang.annotation.IncompleteAnnotationException

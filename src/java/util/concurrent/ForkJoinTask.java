@@ -140,11 +140,11 @@ import java.lang.reflect.Constructor;
  * {@link #isCompletedNormally} is true if a task completed without
  * cancellation or encountering an exception; {@link #isCancelled} is
  * true if the task was cancelled (in which case {@link #getException}
- * returns a {@link CancellationException}); and
+ * returns a {@link java.util.concurrent.CancellationException}); and
  * {@link #isCompletedAbnormally} is true if a task was either
  * cancelled or encountered an exception, in which case {@link
  * #getException} will return either the encountered exception or
- * {@link CancellationException}.
+ * {@link java.util.concurrent.CancellationException}.
  *
  * <p>The ForkJoinTask class is not usually directly subclassed.
  * Instead, you subclass one of the abstract classes that support a
