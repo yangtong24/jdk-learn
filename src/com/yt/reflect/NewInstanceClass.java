@@ -14,6 +14,7 @@ import java.lang.reflect.Constructor;
 public class NewInstanceClass {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+
         Class<TestClass> clazz = TestClass.class;
 
         Constructor<?>[] constructors = clazz.getConstructors();
