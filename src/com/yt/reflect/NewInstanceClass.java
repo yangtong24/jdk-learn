@@ -3,7 +3,8 @@ package com.yt.reflect;
 import java.lang.reflect.Constructor;
 
 /**
- * @Description: Class.newInstance() 的使用有严格的限制，那就是一个 Class 对象中，必须存在一个无参数的 Constructor，并且这个 Constructor 必须要有访问的权限
+ * @Description:
+ * Class.newInstance() 的使用有严格的限制，那就是一个 Class 对象中，必须存在一个无参数的 Constructor，并且这个 Constructor 必须要有访问的权限
  * 通过 Constructor.newInstance() 却没有这种限制。
  * Constructor.newInstance() 适应任何类型的 Constructor,无论它们有参数还是无参数，只要通过 setAccessible() 控制好访问权限就可以了。
  * 所以，一般建议优先使用 Constructor.newInstance() 去创建一个对象实例
