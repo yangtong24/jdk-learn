@@ -582,6 +582,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                 } while ((e = e.next) != null);
             }
         }
+
         return null;
     }
 
