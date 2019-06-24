@@ -106,7 +106,7 @@ final class DualPivotQuicksort {
      */
     static void sort(int[] a, int left, int right,
                      int[] work, int workBase, int workLen) {
-        // Use Quicksort on small arrays
+        // 数组中元素个数比较少，采用快速排序
         if (right - left < QUICKSORT_THRESHOLD) {
             sort(a, left, right, true);
             return;
@@ -214,7 +214,7 @@ final class DualPivotQuicksort {
     private static void sort(int[] a, int left, int right, boolean leftmost) {
         int length = right - left + 1;
 
-        // Use insertion sort on tiny arrays
+        // 数组元素个数少于47采用插入排序
         if (length < INSERTION_SORT_THRESHOLD) {
             if (leftmost) {
                 /*
