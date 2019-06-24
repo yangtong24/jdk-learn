@@ -23,6 +23,7 @@ public class NewInstanceClass {
         }
 
         TestClass obj = clazz.newInstance();
+
         System.out.println(obj.toString());
     }
 }
