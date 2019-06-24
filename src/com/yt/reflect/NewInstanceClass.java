@@ -20,6 +20,7 @@ public class NewInstanceClass {
         for (Constructor<?> constructor : constructors) {
             System.out.println("constructor = " + constructor);
         }
+
         TestClass obj = clazz.newInstance();
         System.out.println(obj.toString());
     }
