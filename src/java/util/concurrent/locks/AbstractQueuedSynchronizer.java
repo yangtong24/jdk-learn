@@ -285,6 +285,7 @@ import sun.misc.Unsafe;
  *
  * @since 1.5
  * @author Doug Lea
+ * AQS学习
  */
 public abstract class AbstractQueuedSynchronizer
     extends AbstractOwnableSynchronizer
