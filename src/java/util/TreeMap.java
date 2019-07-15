@@ -2220,6 +2220,10 @@ public class TreeMap<K,V>
     /** From CLR */
     private void rotateLeft(Entry<K,V> p) {
         if (p != null) {
+            // step1: 设置旋转后的p的右孩子
+            // step2: 设置p的parent旋转后的孩子
+            // step3: 设置旋转后的p的parent
+
             Entry<K,V> r = p.right;
             p.right = r.left;
             if (r.left != null)
