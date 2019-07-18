@@ -227,13 +227,17 @@ public class ReentrantLock implements Lock, java.io.Serializable {
         /**
          * Fair version of tryAcquire.  Don't grant access unless
          * recursive call or no waiters or is first.
+         * 公平锁尝试获取锁的实现
          */
         protected final boolean tryAcquire(int acquires) {
             final Thread current = Thread.currentThread();
+            // 获取当前线程的状态
             int c = getState();
             if (c == 0) {
+                // 0代表没有线程持有锁， 如果当前线程排队的前面没有线程了， 那么通过cas持有锁
                 if (!hasQueuedPredecessors() &&
                     compareAndSetState(0, acquires)) {
+                    // 设置当前线程为独占式
                     setExclusiveOwnerThread(current);
                     return true;
                 }
